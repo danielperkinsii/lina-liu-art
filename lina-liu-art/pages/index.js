@@ -17,19 +17,7 @@ function HomePage() {
     console.log(`Error getting Entries for ${contentType.name}.`)
   }
 
-  
-  // client.getAssets()
-  //   .then((assets) => { assets.items.map((asset) => {
-  //     let imageURL = `https: ${asset.fields.url}`
-  //     setAssets([...imageURL])
-  //   })
-  // })
-  //   .catch((error) => console.log(error))
-  
-  
-
   const [posts, setPosts] = useState([])
-  const [assets, setAssets] = useState([])
 
   useEffect(() => {
     async function getPosts() {
@@ -44,12 +32,7 @@ function HomePage() {
   return (
     <>
       <Head>
-        <title>Next.js + Contentful</title>
-        <link
-          rel="stylesheet"
-          href="https://css.zeit.sh/v1.css"
-          type="text/css"
-        />
+        <title>Lina Liu Art</title>
       </Head>
       {posts.length > 0
         ? posts.map((p) => (
