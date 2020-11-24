@@ -6,7 +6,7 @@ export default function Layout({ children, title }) {
         <div>
             <Head>
                 <title>{ title ? `Lina Liu Art :: ${title}` : 'Lina Liu Art'}</title>
-                <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+                <script ></script>
             </Head>
             <div>{ children }</div>
         </div>
