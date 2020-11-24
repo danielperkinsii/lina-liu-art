@@ -1,14 +1,25 @@
 import React from 'react'
 import Head from 'next/head'
+import Header from './navs/header'
 
 export default function Layout({ children, title }) {
     return (
         <div>
             <Head>
                 <title>{ title ? `Lina Liu Art :: ${title}` : 'Lina Liu Art'}</title>
-                <script ></script>
+                <link href="https://fonts.googleapis.com/css2?family=Cormorant&display=swap" rel="stylesheet" />
+                <meta charset="utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </Head>
-            <div>{ children }</div>
+            <Header />
+            <div className='mx-4 px-4'>{ children }</div>
+    <style jsx global>{`
+        html,
+        body {
+            font-family: 'Cormorant', serif;
+            overflow-x: hidden;
+        }
+    `}</style>
         </div>
     )
 }

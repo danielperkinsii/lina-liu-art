@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
 import Post from '../components/post'
+import Layout from '../components/layout'
 
 const client = require('contentful').createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
@@ -31,9 +32,7 @@ function HomePage() {
 
   return (
     <>
-      <Head>
-        <title>Lina Liu Art</title>
-      </Head>
+      <Layout>
       {posts.length > 0
         ? posts.map((p) => (
             <Post
@@ -45,7 +44,7 @@ function HomePage() {
             />
           ))
         : null}
-        
+      </Layout>
     </>
   )
 }
