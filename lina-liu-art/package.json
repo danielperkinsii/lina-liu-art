@@ -3,10 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next",
     "build": "next build",
-    "start": "next start",
-    "export": "npm run build && next export"
+    "start": "next start"
   },
   "dependencies": {
     "contentful": "^7.14.14",
