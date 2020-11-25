@@ -12,8 +12,9 @@ function HomePage() {
   async function fetchEntries() {
     const entries = await client.getEntries()
     if (entries.items) {
+      
       console.log(entries.items)
-      return entries.items 
+      return entries.items
     }
     console.log(`Error getting Entries for ${contentType.name}.`)
   }
@@ -28,14 +29,13 @@ function HomePage() {
     getPosts()
   }, [])
 
-
-
   return (
     <>
       <Layout>
+        <div className='flex flex-wrap content-start justify-center'>
       {posts.length > 0
-        ? posts.map((p) => (
-            <Post
+        ? posts.map((p, index) => (
+            <Post key={index}
               alt={p.fields.alt}
               date={p.fields.date}
               key={p.fields.title}
@@ -44,6 +44,7 @@ function HomePage() {
             />
           ))
         : null}
+        </div>
       </Layout>
     </>
   )

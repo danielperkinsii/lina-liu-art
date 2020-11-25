@@ -5,7 +5,7 @@ export default function Header() {
     return (
     <>
         <nav className='w-full mb-16 text-gray-800 bg-gray-300 flex justify-between items-end px-4 sm:text-xl'>
-            <div className='w-24 -mb-10 mt-2 px-3 bg-red-600'>
+            <div className='w-24 -mb-10 mt-2 px-3 bg-red-600 rounded-md'>
                 <Link href='/'>
                     <h1 className='text-3xl font- tracking-widest text-white bg-red-600'>
                         <a>Lina Liu Art.</a>

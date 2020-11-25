@@ -1,7 +1,9 @@
 module.exports = {
     purge: [],
     theme: {
-      extend: {},
+      extend: {
+        zIndex: ['hover', 'active'],
+      },
     },
     variants: {
       textDecoration: ['responsive', 'hover', 'focus']
