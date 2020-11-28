@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import Head from 'next/head'
 import Post from '../components/post'
 import Layout from '../components/layout'
 
