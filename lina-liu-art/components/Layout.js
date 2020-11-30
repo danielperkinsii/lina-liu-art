@@ -13,13 +13,13 @@ export default function Layout({ children, title }) {
             </Head> */}
             {/* <Header /> */}
             <div className='mx-4 px-4'>{ children }</div>
-            <style jsx global>{`
+            {/* <style jsx global>{`
                 html,
                 body {
                     font-family: 'Cormorant', serif;
                     overflow-x: hidden;
                 }
-            `}</style>
+            `}</style> */}
         </div>
     )
 }
