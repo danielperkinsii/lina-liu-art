@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import Post from '../components/post'
-import Layout from '../components/layout'
+import Post from '../components/post.js'
+import Layout from '../components/layout.js'
 
 const client = require('contentful').createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,

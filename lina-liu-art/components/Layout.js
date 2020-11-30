@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import Header from './header'
+import Header from './header.js'
 
 export default function Layout({ children, title }) {
     return (
