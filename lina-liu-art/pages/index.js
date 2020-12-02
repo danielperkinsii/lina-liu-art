@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import Post from '../components/post.js'
+import Post from '../components/post'
+import Layout from '../components/layout'
 
 const client = require('contentful').createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
@@ -29,6 +30,8 @@ function HomePage() {
 
   return (
     <>
+    <Layout>
+
         <div className='flex flex-wrap content-start justify-center'>
       {posts.length > 0
         ? posts.map((p, index) => (
@@ -42,6 +45,8 @@ function HomePage() {
           ))
         : null}
         </div>
+              
+    </Layout>
     </>
   )
 }
