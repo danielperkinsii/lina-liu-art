@@ -1,12 +1,16 @@
 module.exports = {
-    purge: [],
+    purge: [
+      './pages/**/*.{js,jsx}',
+      './components/**/*.{js,jsx}'
+    ],
     theme: {
       extend: {
-        zIndex: ['hover', 'active'],
+        
       },
     },
     variants: {
-      textDecoration: ['responsive', 'hover', 'focus']
+      textDecoration: ['responsive', 'hover', 'focus'],
+      zIndex: ['hover', 'active'],
     },
     plugins: [],
   }

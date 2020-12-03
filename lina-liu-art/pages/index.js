@@ -19,6 +19,7 @@ function HomePage() {
   }
 
   const [posts, setPosts] = useState([])
+  const [category, setCategory] = useState([])
 
   useEffect(() => {
     async function getPosts() {
@@ -31,21 +32,27 @@ function HomePage() {
   return (
     <>
     <Layout>
+      <div className="sm:grid sm:grid-cols-3 sm:gap-4">
 
-        <div className='flex flex-wrap content-start justify-center'>
+      
+        <div className='w-full col-span-1 bg-green-500'>
+          <h1>some content here</h1>
+        </div>
+        <div className='col-span-2 flex flex-wrap content-start justify-start mx-auto'>
       {posts.length > 0
         ? posts.map((p, index) => (
-            <Post key={index}
+            <Post 
+              key={index}
               alt={p.fields.alt}
-              date={p.fields.date}
-              key={p.fields.title}
               title={p.fields.title}
+              medium={p.fields.medium}
+              size={p.fields.size}
               url={p.fields.image.fields.file.url}
             />
           ))
-        : null}
+        : <div> Loading ... </div>}
         </div>
-              
+        </div>
     </Layout>
     </>
   )
