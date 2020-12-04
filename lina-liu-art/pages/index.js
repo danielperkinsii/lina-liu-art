@@ -35,8 +35,8 @@ function HomePage() {
       <div className="sm:grid sm:grid-cols-3 sm:gap-4">
 
       
-        <div className='w-full col-span-1 bg-green-500'>
-          <h1>some content here</h1>
+        <div className='w-full flex items-center justify-center col-span-1 shadow-lg rounded-md'>
+          <h1 className=''>some content here</h1>
         </div>
         <div className='col-span-2 flex flex-wrap content-start justify-start mx-auto'>
       {posts.length > 0
