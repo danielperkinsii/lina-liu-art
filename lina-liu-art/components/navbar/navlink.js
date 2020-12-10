@@ -8,13 +8,13 @@ export default function NavLink({ children, href }) {
 
   const activeClasses =
     router.pathname === href
-      ? 'border-red-500 focus:border-red-100'
+      ? 'border-red-500 focus:border-red-100 text-red-600'
       : 'border-transparent hover:text-gray-700 hover:border-gray-300 focus:text-gray-700 focus:border-gray-300';
 
   return (
     <Link href={href}>
       <a
-        className={`inline-flex items-center justify-center w-32 border-b-2 text-black focus:outline-none ${activeClasses} transition duration-150 ease-in-out`}
+        className={`inline-flex items-center w-32 border-r-4 p-1 text-black focus:outline-none rounded-md ${activeClasses} transition duration-150 ease-in-out`}
       >
         {children}
       </a>

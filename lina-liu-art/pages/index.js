@@ -47,11 +47,6 @@ export default function HomePage({ posts }) {
   return (
     <>
     <Layout>
-      <div className="sm:grid sm:grid-cols-3 sm:gap-4">
-        <div className='w-full flex items-center justify-center col-span-1 shadow-lg rounded-md'>
-          <h1 className=''>some content here</h1>
-        </div>
-        <div className='col-span-2 flex flex-wrap content-start justify-start mx-auto'>
       {posts.length > 0
         ? posts.map((p, index) => (
             <Post 
@@ -65,8 +60,6 @@ export default function HomePage({ posts }) {
             />
           ))
         : <div> Loading ... </div>}
-        </div>
-        </div>
     </Layout>
     </>
   )

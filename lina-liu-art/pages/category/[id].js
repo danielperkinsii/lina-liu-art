@@ -8,7 +8,7 @@ import { getAllPostIds, getPostById } from '../index'
 
 //getstaticpaths should be on this page
     //you can use `npm run start` to see the static pages that this function will generate on build time
-export default function Example({ postData, props }) {
+export default function Example({ postData }) {
 
     return (
         <>
