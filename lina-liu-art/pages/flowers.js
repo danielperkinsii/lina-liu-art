@@ -36,6 +36,8 @@ export default function Flowers() {
                     >{link.name}</div>
                 ))}
             </div>
+                
         </Layout>
     )
 }
+
