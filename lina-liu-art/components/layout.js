@@ -12,12 +12,12 @@ export default function Layout({ children, title }) {
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </Head>
             
-            <div className='mx-4 px-4 pb-8 w-full'>
-                <div className='sm:grid sm:grid-cols-4 sm:gap-4'>
-                    <div className='h-full col-span-1'>
+            <div className='pb-8 w-full'>
+                <div className='flex flex-col sm:flex-row'>
+                    <div className=''>
                         <Header />
                     </div>
-                    <div className='col-span-3'>
+                    <div className=''>
                         { children }
                     </div>
                 </div>
@@ -26,6 +26,10 @@ export default function Layout({ children, title }) {
                 html,
                 body {
                     overflow-x: hidden;
+                    font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+                    font-size: 14px;
+                    line-height: 1.78;
+                    color: #555;
                 }
             `}</style>
         </div>
