@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Post from '../components/post'
 import Layout from '../components/layout'
 import Link from 'next/link'
+import Masonry from 'react-masonry-css'
 
 const client = require('contentful').createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
@@ -43,23 +44,39 @@ export async function getPostById(id) {
 }
 
 export default function HomePage({ posts }) {
+  const breakpointColumnsObj = {
+    default: 5,
+    1536: 4,
+    1280: 3,
+    1024: 3,
+    768: 2,
+    640: 2
+  };
 
   return (
     <>
     <Layout>
-      {posts.length > 0
-        ? posts.map((p, index) => (
-            <Post 
-              key={index}
-              id={p.sys.id}
-              alt={p.fields.alt}
-              title={p.fields.title}
-              medium={p.fields.medium}
-              size={p.fields.size}
-              url={p.fields.image.fields.file.url}
-            />
-          ))
-        : <div> Loading ... </div>}
+      <div className='w-full'>
+        <Masonry 
+        breakpointCols={breakpointColumnsObj}
+        className='flex w-full mx-auto'
+        columnClassName='mx-auto'>
+          
+        {posts.length > 0
+          ? posts.map((p, index) => (
+              <Post 
+                key={index}
+                id={p.sys.id}
+                alt={p.fields.alt}
+                title={p.fields.title}
+                medium={p.fields.medium}
+                size={p.fields.size}
+                url={p.fields.image.fields.file.url}
+              />
+            ))
+          : <div> Loading ... </div>}     
+          </Masonry>           
+        </div>
     </Layout>
     </>
   )

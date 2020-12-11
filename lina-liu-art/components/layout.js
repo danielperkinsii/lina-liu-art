@@ -13,11 +13,11 @@ export default function Layout({ children, title }) {
             </Head>
             
             <div className='mx-4 px-4 pb-8 w-full'>
-                <div className='sm:grid sm:grid-cols-3 sm:gap-4'>
+                <div className='sm:grid sm:grid-cols-4 sm:gap-4'>
                     <div className='h-full col-span-1'>
                         <Header />
                     </div>
-                    <div className='col-span-2 flex flex-wrap content-start justify-start mx-auto'>
+                    <div className='col-span-3'>
                         { children }
                     </div>
                 </div>
