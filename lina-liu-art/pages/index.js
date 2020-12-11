@@ -47,6 +47,7 @@ export default function HomePage({ posts }) {
   return (
     <>
     <Layout>
+      <div className='flex flex-col flex-wrap h-full overflow-y-auto'>
       {posts.length > 0
         ? posts.map((p, index) => (
             <Post 
@@ -60,6 +61,7 @@ export default function HomePage({ posts }) {
             />
           ))
         : <div> Loading ... </div>}
+        </div>
     </Layout>
     </>
   )

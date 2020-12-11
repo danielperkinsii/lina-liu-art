@@ -14,7 +14,7 @@ export default function NavLink({ children, href }) {
   return (
     <Link href={href}>
       <a
-        className={`inline-flex items-center w-32 border-r-4 p-1 text-black focus:outline-none rounded-md ${activeClasses} transition duration-150 ease-in-out`}
+        className={`inline-flex items-center w-32 border-r-4 p-1 text-black focus:outline-none ${activeClasses} transition duration-150 ease-in-out`}
       >
         {children}
       </a>

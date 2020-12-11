@@ -17,7 +17,7 @@ export default function Layout({ children, title }) {
                     <div className='h-full col-span-1'>
                         <Header />
                     </div>
-                    <div className='col-span-2 flex flex-wrap content-start justify-start mx-auto'>
+                    <div className='col-span-2'>
                         { children }
                     </div>
                 </div>
