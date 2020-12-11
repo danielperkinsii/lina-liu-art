@@ -3,10 +3,10 @@ import Link from 'next/link'
 
 function Post({ alt, medium, size, title, url, id }) {
     return (
-      <div className='p-1'>
+      <div className='p-1 '>
         <Link href={`category/${id}`}>
             <a>
-                <img className='w-72 h-auto shadow-md'
+                <img className='w-72 h-auto'
                 alt={alt} 
                 src={`https://${url}`} 
                 />
