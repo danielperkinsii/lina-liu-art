@@ -17,7 +17,7 @@ export default function Layout({ children, title }) {
                     <div className='sm:w-1/4'>
                         <Header />
                     </div>
-                    <div className='mx-auto'>
+                    <div className='mx-auto relative'>
                         { children }
                     </div>
                 </div>

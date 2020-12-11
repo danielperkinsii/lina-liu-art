@@ -13,15 +13,11 @@ export default function Example({ postData }) {
     return (
         <>
         <Layout>
-            <div>
-                <h1>
-                    <Link href='/'>Go Home!!!!!</Link>
-                    <div>
-                        <h1>{ postData.sys.id }</h1>
-                        <img src={`https://${postData.fields.image.fields.file.url}`} />
-                        <h1>hello</h1>
-                    </div>
-                </h1>
+            <div className='my-24 mx-auto'>
+                <img src={`https://${postData.fields.image.fields.file.url}`} />
+                <h1 className='text-2xl'>{ postData.fields.title }</h1>
+                <p>{ postData.fields.medium }</p>
+                <p>{ postData.fields.size }</p>
             </div>
         </Layout>
         </>

@@ -25,13 +25,10 @@ export default function Header( { className }) {
             path: '#'
         }
     ]
-
-    const [showFlowersList, setShowFlowersList] = useState(false)
-    const [showLandscapesList, setShowLandscapesList] = useState(false)
-
+    
     return (
         <>
-            <nav className={`${className} flex flex-row sm:flex-col sm:justify-between sm:w-1/4 sm:h-screen p-1 text-gray-800 sm:pl-4 sm:text-xl sm:fixed`}>
+            <div className={`${className} flex flex-row sm:flex-col sm:justify-between sm:w-1/4 sm:h-screen p-1 text-gray-800 sm:pl-4 sm:text-xl sm:fixed`}>
               <div className='flex sm:flex-col w-full'>
                 <div className='p-3 bg-white w-full sm:w-40 sm:h-56 sm:bg-red-600 rounded-lg'>
                     <Link href='/'>
@@ -60,7 +57,7 @@ export default function Header( { className }) {
                     <p>in St. Louis, MO, USA</p>
                 </span>
               </div>
-            </nav>
+            </div>
         </>
     )
 }
