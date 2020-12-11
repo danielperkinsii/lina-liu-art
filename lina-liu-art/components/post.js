@@ -23,7 +23,7 @@ function Post({ alt, medium, size, title, url, id }) {
         <h2 className='text-xl'>{title}</h2>
         <h2 className=''>{medium}, {size}</h2>
         <Link href={`category/${id}`}>
-          <a className='text-right p-2 text-blue-400 text-2xl font-bold'>Click to enlarge</a>
+          <a className='hidden sm:contents text-right p-2 text-blue-400 text-2xl font-bold'>Click to enlarge</a>
         </Link>
       </div>
       : null}
