@@ -45,7 +45,7 @@ export async function getPostById(id) {
 
 export default function HomePage({ posts }) {
   const breakpointColumnsObj = {
-    default: 5,
+    default: 4,
     1536: 4,
     1280: 3,
     1024: 3,

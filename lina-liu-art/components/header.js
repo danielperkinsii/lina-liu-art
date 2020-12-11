@@ -31,16 +31,19 @@ export default function Header( { className }) {
 
     return (
         <>
-            <nav className={`${className} flex flex-row sm:flex-col w-full h-full p-1 text-gray-800 sm:px-4 sm:text-xl`}>
-                <div className='p-3 bg-white w-1/2 sm:w-full sm:bg-red-600 rounded-lg'>
+            <nav className={`${className} flex flex-row sm:flex-col sm:justify-between sm:w-1/4 sm:h-screen p-1 text-gray-800 sm:pl-4 sm:text-xl sm:fixed`}>
+              <div className='flex sm:flex-col w-full'>
+                <div className='p-3 bg-white w-full sm:w-40 sm:h-56 sm:bg-red-600 rounded-lg'>
                     <Link href='/'>
-                        <h1 className='text-3xl sm:w-40 sm:h-48 font-bold tracking-widest text-red-600 sm:text-white'>
+                        <h1 className='text-6xl font- text-red-600 sm:text-white'>
                             <a>Lina <br/>Liu <br/>Art.</a>
                         </h1>
                     </Link>
                 </div>
-                <div></div>
-                <div className='flex flex-col content-start content-around w-1/2 sm:w-full my-0 sm:my-10'>
+                <div className='text-gray-500 text-base hidden sm:contents'>
+                    <p className='px-1 py-4'>Lina's art tagline here. This is where the tagline will be. The tagline will be here. Here.</p>
+                </div>
+                <div className='flex flex-col content-start content-around justify-evenly w-full sm:w-full my-0 sm:my-12 pl-1'>
                     {links.map((link, index) => (
                         <NavLink 
                         href={link.path} 
@@ -49,6 +52,14 @@ export default function Header( { className }) {
                         </NavLink>
                     ))}
                 </div>
+              </div>
+              <div className='text-sm hidden sm:flex sm:flex-col py-6'>
+                <p>www.linaliuart.com </p>
+                <span className='tracking-tighter'>
+                    <p>built by Brick Oven Web Design, LLC </p>
+                    <p>in St. Louis, MO, USA</p>
+                </span>
+              </div>
             </nav>
         </>
     )

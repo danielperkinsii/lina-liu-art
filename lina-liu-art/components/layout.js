@@ -14,10 +14,10 @@ export default function Layout({ children, title }) {
             
             <div className='pb-8 w-full'>
                 <div className='flex flex-col sm:flex-row'>
-                    <div className=''>
+                    <div className='sm:w-1/4'>
                         <Header />
                     </div>
-                    <div className=''>
+                    <div className='mx-auto'>
                         { children }
                     </div>
                 </div>
