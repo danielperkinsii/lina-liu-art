@@ -31,15 +31,16 @@ export default function Header( { className }) {
 
     return (
         <>
-            <nav className={`${className} 'h-full p-1 text-gray-800 px-4 sm:text-xl`}>
-                <div className='w-40 h-48 p-3 bg-red-600 rounded-lg'>
+            <nav className={`${className} flex flex-row sm:flex-col w-full h-full p-1 text-gray-800 sm:px-4 sm:text-xl`}>
+                <div className='p-3 bg-white w-1/2 sm:w-full sm:bg-red-600 rounded-lg'>
                     <Link href='/'>
-                        <h1 className='text-3xl font-bold tracking-widest text-white bg-red-600'>
-                            <a>Lina Liu Art.</a>
+                        <h1 className='text-3xl sm:w-40 sm:h-48 font-bold tracking-widest text-red-600 sm:text-white'>
+                            <a>Lina <br/>Liu <br/>Art.</a>
                         </h1>
                     </Link>
                 </div>
-                <div className='flex flex-col content-start content-around my-10'>
+                <div></div>
+                <div className='flex flex-col content-start content-around w-1/2 sm:w-full my-0 sm:my-10'>
                     {links.map((link, index) => (
                         <NavLink 
                         href={link.path} 
