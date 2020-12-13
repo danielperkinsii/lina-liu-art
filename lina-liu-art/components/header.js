@@ -30,7 +30,7 @@ export default function Header( { className }) {
         <>
             <div className={`${className} flex flex-row sm:flex-col sm:justify-between sm:w-1/4 sm:h-screen p-1 text-gray-800 sm:pl-4 sm:text-xl sm:fixed`}>
               <div className='flex sm:flex-col w-full'>
-                <div className='p-3 bg-white w-full sm:w-40 sm:h-56 sm:bg-red-600 rounded-lg'>
+                <div className='p-3 bg-white w-full sm:w-40 sm:h-56 sm:bg-red-600 rounded-lg cursor-pointer'>
                     <Link href='/'>
                         <h1 className='text-6xl font- text-red-600 sm:text-white'>
                             <a>Lina <br/>Liu <br/>Art.</a>

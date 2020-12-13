@@ -19,9 +19,9 @@ function Post({ alt, medium, size, title, url, id }) {
           </a>
       </Link>
       {showElements ? 
-      <div className='flex flex-col w-5/6 h-28 -mt-32 mb-4 bg-gray-700 opacity-75 hover:opacity-100 transition duration-600 ease-in-out rounded-md shadow-lg mx-auto relative py-2 px-3 shadow-lg text-white'>
-        <h2 className='text-xl'>{title}</h2>
-        <h2 className=''>{medium}, {size}</h2>
+      <div className='sm:flex flex-col hidden sm:w-60 h-28 -mt-32 mb-4 bg-gray-700 opacity-75 hover:opacity-100 transition duration-600 ease-in-out rounded-md shadow-lg mx-auto relative py-2 px-3 shadow-lg text-white'>
+        <h2 className='text-xl truncate'>{title}</h2>
+        <h2 className='truncate'>{medium}{size ? `, ${size}` : null}</h2>
         <Link href={`category/${id}`}>
           <a className='hidden sm:contents text-right p-2 text-blue-400 text-2xl font-bold'>Click to enlarge</a>
         </Link>
