@@ -1,42 +1,37 @@
-import React from 'react'
-import Head from 'next/head'
 import Layout from '../../components/layout'
-import Link from 'next/link'
-import { getAllPostIds, getPostById } from '../index'
+import { getAllPaintingIds, getPaintingById } from '../../lib/api'
 
-// getstaticprops should be imported on this page
-
-//getstaticpaths should be on this page
-    //you can use `npm run start` to see the static pages that this function will generate on build time
-export default function Example({ postData }) {
-
+export default function Example({ paintingData }) {
     return (
         <>
-        <Layout>
-            <div className='my-24 mx-auto'>
-                <img src={`https://${postData.fields.image.fields.file.url}`} />
-                <h1 className='text-2xl'>{ postData.fields.title }</h1>
-                <p>{ postData.fields.medium }</p>
-                <p>{ postData.fields.size }</p>
-            </div>
-        </Layout>
+            <Layout>
+                <div className='my-24 mx-auto'>
+                    <img src={`https://${paintingData.fields.image.fields.file.url}`} />
+                    <h1 className='text-2xl'>{paintingData.fields.title}</h1>
+                    <p>{paintingData.fields.medium}</p>
+                    <p>{paintingData.fields.size}</p>
+                </div>
+            </Layout>
         </>
     )
 }
 
+// gets path for page
+// path is the id of the painting object provided by contentful
 export async function getStaticPaths() {
-    const paths = await getAllPostIds()
+    const paths = await getAllPaintingIds()
     return {
         paths,
         fallback: false
     }
 }
 
+// gets painting object and sets it to props
 export async function getStaticProps( {params} ) {
-    const postData = await getPostById(params.id)
+    const paintingData = await getPaintingById(params.id)
     return {
       props: {
-        postData
-      } // will be passed to the page component as props
+        paintingData
+      }
     }
   }
