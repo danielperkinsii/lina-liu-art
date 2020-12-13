@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import NavLink from './navbar/navlink'
+import SearchBar from './searchbar'
 
 export default function Header( { className }) {
+    const [query, setQuery] = useState('')
+
     const links = [
         {
             name: 'Home',
@@ -40,6 +43,9 @@ export default function Header( { className }) {
                 <div className='text-gray-500 text-base hidden sm:contents'>
                     <p className='px-1 py-4'>Lina's art tagline here. This is where the tagline will be. The tagline will be here. Here.</p>
                 </div>
+                <SearchBar
+                query={query}
+                setQuery={setQuery}/>
                 <div className='flex flex-col content-start content-around justify-evenly w-full sm:w-full my-0 sm:my-12 pl-1'>
                     {links.map((link, index) => (
                         <NavLink 

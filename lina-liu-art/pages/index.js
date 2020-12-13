@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Painting from '../components/painting'
 import Layout from '../components/layout'
 import Masonry from 'react-masonry-css'
 import { fetchEntries } from '../lib/api'
 
 export default function HomePage({ paintings }) {
+  const [query, setQuery] = useState('')
   const breakpointColumnsObj = {
     default: 4,
     1536: 4,
