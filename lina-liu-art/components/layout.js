@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Header from './header'
 
-export default function Layout({ children, title }) {
+export default function Layout({ children, title, query, setQuery }) {
     return (
         <div>
             <Head>
@@ -15,7 +15,11 @@ export default function Layout({ children, title }) {
             <div className='pb-8 w-full'>
                 <div className='flex flex-col sm:flex-row'>
                     <div className='sm:w-1/4'>
-                        <Header />
+                        <Header 
+                        query={query}
+                        setQuery={setQuery}
+                        />
+                        
                     </div>
                     <div className='mx-auto relative'>
                         { children }
