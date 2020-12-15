@@ -4,9 +4,7 @@ import Link from 'next/link'
 export default function Painting({ alt, medium, size, title, url, id, query }) {
   const [showElements, setShowElements] = useState(false)
 
-
   return (
-    
     <div 
     className='pl-1 pt-1'
     onMouseEnter={() => setShowElements(true)}
