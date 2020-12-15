@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Link from 'next/link'
 import NavLink from './navbar/navlink'
 import SearchBar from './searchbar'
 
-export default function Header( { className }) {
-    const [query, setQuery] = useState('')
+export default function Header( { className, query, setQuery }) {
 
     const links = [
         {
@@ -40,13 +39,13 @@ export default function Header( { className }) {
                         </h1>
                     </Link>
                 </div>
-                <div className='text-gray-500 text-base hidden sm:contents'>
+                <div className='hidden sm:flex text-gray-500 text-base w-1/2 sm:w-full'>
                     <p className='px-1 py-4'>Lina's art tagline here. This is where the tagline will be. The tagline will be here. Here.</p>
                 </div>
                 <SearchBar
                 query={query}
                 setQuery={setQuery}/>
-                <div className='flex flex-col content-start content-around justify-evenly w-full sm:w-full my-0 sm:my-12 pl-1'>
+                <div className='flex flex-col content-start content-around justify-evenly w-full my-0 my-4 pl-1'>
                     {links.map((link, index) => (
                         <NavLink 
                         href={link.path} 
@@ -56,7 +55,7 @@ export default function Header( { className }) {
                     ))}
                 </div>
               </div>
-              <div className='text-sm hidden sm:flex sm:flex-col py-6'>
+              <div className='text-sm hidden sm:flex flex-col py-6'>
                 <p>www.linaliuart.com </p>
                 <span className='tracking-tighter'>
                     <p>built by Brick Oven Web Design, LLC </p>
