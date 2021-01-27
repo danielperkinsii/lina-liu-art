@@ -9,6 +9,7 @@ module.exports = {
       },
     },
     variants: {
+      backgroundColor: ['odd'],
       textDecoration: ['responsive', 'hover', 'focus'],
       zIndex: ['hover', 'active'],
     },
