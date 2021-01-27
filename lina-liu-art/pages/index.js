@@ -21,7 +21,9 @@ export default function HomePage({ paintings }) {
   
   function filterPaintings() {
     if (query.length > 0) {
-      let newPaintings = [...paintings].filter(painting => paintingsRegex.test(painting.fields.title))
+      let newPaintings = [...paintings].filter(painting => {
+        return paintingsRegex.test(painting.fields.title) || paintingsRegex.test(painting.fields.medium) || paintingsRegex.test(painting.fields.size)
+      })
       setPaintingsShown(newPaintings) 
     } else if (query.length === 0) {
       setPaintingsShown([...paintings])

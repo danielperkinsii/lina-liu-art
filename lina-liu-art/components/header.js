@@ -12,7 +12,7 @@ export default function Header( { className, query, setQuery }) {
         },
         {
             name: 'About',
-            path: '#'
+            path: '/about'
         },
         {
             name: 'Flowers',
@@ -40,7 +40,7 @@ export default function Header( { className, query, setQuery }) {
                     </Link>
                 </div>
                 <div className='hidden sm:flex text-gray-500 text-base w-1/2 sm:w-full'>
-                    <p className='px-1 py-4'>Lina's art tagline here. This is where the tagline will be. The tagline will be here. Here.</p>
+                    <p className='px-1 py-4'>Search Lina's Gallery for a flower species like "Tulip" or a medium like "Oil on Canvas" or "Watercolor".</p>
                 </div>
                 <SearchBar
                 query={query}
