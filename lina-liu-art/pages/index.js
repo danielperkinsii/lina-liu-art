@@ -18,7 +18,6 @@ export default function HomePage({ paintings }) {
   }
   let paintingsRegex = new RegExp(query, "i")
 
-  
   function filterPaintings() {
     if (query.length > 0) {
       let newPaintings = [...paintings].filter(painting => {
@@ -45,9 +44,9 @@ export default function HomePage({ paintings }) {
         className='flex w-full mx-auto'
         columnClassName='mx-auto'>
         {paintingsShown.length > 0
-          ? paintingsShown.map((p, index) => (
+          ? paintingsShown.map((p) => (
               <Painting 
-                key={index}
+                key={p.sys.id}
                 id={p.sys.id}
                 title={p.fields.title}
                 medium={p.fields.medium}
@@ -56,7 +55,7 @@ export default function HomePage({ paintings }) {
                 query={query}
               />
             ))
-          : <div> Loading ... </div>}     
+          : <div> Loading... </div>}     
           </Masonry>           
         </div>
     </Layout>
@@ -67,6 +66,7 @@ export default function HomePage({ paintings }) {
 // gets painting object and sets it to props
 export async function getStaticProps() {
   const paintings = await fetchEntries()
+
   return {
     props: {
       paintings
