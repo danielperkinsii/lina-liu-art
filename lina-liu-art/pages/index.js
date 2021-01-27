@@ -16,12 +16,13 @@ export default function HomePage({ paintings }) {
     768: 2,
     640: 2
   }
-  let paintingsRegex = new RegExp(query, "i")
 
-  
+  let paintingsRegex = new RegExp(query, "gi")
   function filterPaintings() {
     if (query.length > 0) {
-      let newPaintings = [...paintings].filter(painting => paintingsRegex.test(painting.fields.title))
+      let newPaintings = [...paintings].filter(painting => {
+        return paintingsRegex.test(painting.fields.title) || paintingsRegex.test(painting.fields.medium) || paintingsRegex.test(painting.fields.size) 
+      })
       setPaintingsShown(newPaintings) 
     } else if (query.length === 0) {
       setPaintingsShown([...paintings])
@@ -54,8 +55,8 @@ export default function HomePage({ paintings }) {
                 query={query}
               />
             ))
-          : <div> Loading ... </div>}     
-          </Masonry>           
+          : <div> Loading ... </div>}
+          </Masonry>
         </div>
     </Layout>
     </>

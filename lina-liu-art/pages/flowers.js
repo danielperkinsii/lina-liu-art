@@ -1,6 +1,6 @@
 import Layout from '../components/layout'
 
-export default function Flowers() {
+export default function Flowers({ paintings }) {
     const links = [
         // {
         //     name: 'Rose',

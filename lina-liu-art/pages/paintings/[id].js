@@ -27,7 +27,7 @@ export async function getStaticPaths() {
 }
 
 // gets painting object and sets it to props
-export async function getStaticProps( {params} ) {
+export async function getStaticProps({ params }) {
     const paintingData = await getPaintingById(params.id)
     return {
       props: {
