@@ -23,10 +23,9 @@ export default function Landscapes({ landscapes }) {
                     </tr>
                 ))
                 :
-                <div className='flex flex-col justify-center items-center my-60'> <p 
-                className='my-2 mx-auto text-3xl'>Page content coming soon 
-                <br/></p>
-                <p><span className='text-6xl'>🏞️</span></p>
+                <div className='flex flex-col justify-center items-center my-60'>
+                    <p className='my-2 mx-auto text-3xl'>Page content coming soon </p><br/>
+                    <p><span className='text-6xl'>🏞️</span></p>
                 </div>}
             </div>
         </Layout>
@@ -37,7 +36,7 @@ export default function Landscapes({ landscapes }) {
 export async function getStaticProps() {
     const paintings = await fetchEntries()
 
-    // filtering to flowers only
+    // filtering to landscapes only
     const landscapes = paintings.filter(flower => flower.fields.category.toLowerCase() === 'landscapes')
     return {
         props: {

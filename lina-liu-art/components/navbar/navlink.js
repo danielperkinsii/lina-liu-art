@@ -9,8 +9,7 @@ export default function NavLink({ children, href }) {
   const activeClasses =
     router.pathname === href
       ? 'border-red-500 focus:border-red-100 text-red-600'
-      : 'border-transparent hover:text-gray-700 hover:border-gray-300 focus:text-gray-700 focus:border-gray-300';
-
+      : 'border-transparent hover:text-gray-700 hover:border-gray-300 focus:text-gray-700 focus:border-gray-300'
   return (
     <Link href={href}>
       <a

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { fetchEntries } from '../lib/api'
 import Painting from '../components/painting'
 import Layout from '../components/layout'
-import SearchBar from '../components/searchbar'
 import Masonry from 'react-masonry-css'
 
 export default function HomePage({ paintings }) {
@@ -66,7 +65,6 @@ export default function HomePage({ paintings }) {
 // gets painting object and sets it to props
 export async function getStaticProps() {
   const paintings = await fetchEntries()
-
   return {
     props: {
       paintings

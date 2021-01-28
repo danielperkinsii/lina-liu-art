@@ -4,7 +4,6 @@ import NavLink from './navbar/navlink'
 import SearchBar from './searchbar'
 
 export default function Header( { className, query, setQuery }) {
-
     const links = [
         {
             name: 'Home',
@@ -27,7 +26,6 @@ export default function Header( { className, query, setQuery }) {
             path: '/contact'
         }
     ]
-    
     return (
         <>
             <div className={`${className} flex flex-row sm:flex-col sm:justify-between sm:w-1/4 sm:h-screen p-1 text-gray-800 sm:pl-4 sm:text-xl sm:fixed`}>

@@ -24,10 +24,9 @@ export default function Flowers({ flowers }) {
                     </tr>
                 ))
                 :
-                <div className='flex flex-col justify-center items-center my-60'> <p 
-                className='my-2 mx-auto text-3xl'>Page coming soon 
-                <br/></p>
-                <p><span className='text-6xl'>🌺</span></p>
+                <div className='flex flex-col justify-center items-center my-60'>
+                    <p className='my-2 mx-auto text-3xl'>Page coming soon</p><br/>
+                    <p><span className='text-6xl'>🌺</span></p>
                 </div>}
             </div>
         </Layout>

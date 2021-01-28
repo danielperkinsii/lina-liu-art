@@ -7,19 +7,13 @@ export default function Layout({ children, title, query, setQuery }) {
         <div>
             <Head>
                 <title>{ title ? `Lina Liu Art :: ${title}` : 'Lina Liu Art'}</title>
-                
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </Head>
-            
             <div className='pb-8 w-full'>
                 <div className='flex flex-col sm:flex-row'>
                     <div className='sm:w-1/4'>
-                        <Header 
-                        query={query}
-                        setQuery={setQuery}
-                        />
-                        
+                        <Header query={query} setQuery={setQuery}/>
                     </div>
                     <div className='mx-auto relative'>
                         { children }
